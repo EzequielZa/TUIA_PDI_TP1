@@ -32,7 +32,7 @@ python ejercicio_2.py
 Si utilizas un entorno virtual (recomendado), ejecuta los scripts con la ruta al ejecutable de Python de tu entorno:
 
 <details>
-<summary><b>🪟 Windows</b></summary>
+<summary><b>🖥️ Windows</b></summary>
 
 ```bash
 # Sintaxis general
