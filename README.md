@@ -1,95 +1,108 @@
 # TUIA - Procesamiento Digital de Imágenes - TP1
 
-Este repositorio contiene los ejercicios del Trabajo Práctico 1 de la materia Procesamiento Digital de Imágenes (PDI) de la carrera TUIA.
+Este repositorio contiene los ejercicios del Trabajo Práctico 1 de la materia Procesamiento Digital de Imágenes (PDI) de la Tecnicatura Universitaria en Inteligencia Artificial (TUIA).
 
 ## 📋 Requisitos
 
-- Python 3.x instalado en tu sistema
-- Librerías necesarias:
-  - OpenCV (`opencv-python`)
-  - NumPy (`numpy==1.26.4`)
-  - Matplotlib (`matplotlib==3.10.3`)
-  - Pandas (`pandas==2.2.2`)
+- **Python 3.10.4**
+- **Librerías necesarias:**
+  - `opencv-contrib-python==4.10.0.84`
+  - `numpy==1.26.4`
+  - `matplotlib==3.10.3`
+  - `pandas==2.2.2`
 
 ## 🚀 Cómo ejecutar los scripts
 
-Los scripts se pueden ejecutar directamente desde la línea de comandos utilizando el intérprete de Python, siempre y cuando tengas las dependencias instaladas en el intérprete de Python global.
+Los scripts se pueden ejecutar directamente desde la línea de comandos utilizando el intérprete de Python, siempre y cuando tengas las dependencias instaladas.
 
-### Ejecución con Python global
+### Opción 1: Ejecución con Python global
 
-Si tienes las librerías instaladas globalmente, simplemente ejecuta:
-
-#### Ejecutar Ejercicio 1
+Si tienes las librerías instaladas en tu Python global:
 
 ```bash
 python ejercicio_1.py
 ```
 
-#### Ejecutar Ejercicio 2
-
 ```bash
 python ejercicio_2.py
 ```
 
-### Ejecución con entorno virtual
+### Opción 2: Ejecución con entorno virtual
 
-Si prefieres usar un entorno virtual (recomendado para gestionar dependencias), puedes ejecutar los scripts utilizando la ruta al `python.exe` de tu entorno:
+Si utilizas un entorno virtual (recomendado), ejecuta los scripts con la ruta al ejecutable de Python de tu entorno:
 
-#### Windows
+<details>
+<summary><b>🪟 Windows</b></summary>
 
 ```bash
+# Sintaxis general
 ruta\al\entorno\Scripts\python.exe ejercicio_1.py
 ruta\al\entorno\Scripts\python.exe ejercicio_2.py
 ```
 
-**Ejemplo:**
 ```bash
+# Ejemplo con entorno llamado "venv"
 .\venv\Scripts\python.exe ejercicio_1.py
 .\venv\Scripts\python.exe ejercicio_2.py
 ```
 
-#### Linux/MacOS
+</details>
+
+<details>
+<summary><b>🐧 Linux / 🍎 macOS</b></summary>
 
 ```bash
+# Sintaxis general
 ruta/al/entorno/bin/python ejercicio_1.py
 ruta/al/entorno/bin/python ejercicio_2.py
 ```
 
-**Ejemplo:**
 ```bash
+# Ejemplo con entorno llamado "venv"
 ./venv/bin/python ejercicio_1.py
 ./venv/bin/python ejercicio_2.py
 ```
 
+</details>
+
 ## 📦 Instalación de dependencias
 
-Para instalar todas las librerías necesarias con las versiones específicas:
+### Instalación rápida con requirements.txt
 
 ```bash
-pip install numpy==1.26.4 matplotlib==3.10.3 pandas==2.2.2 opencv-python
+pip install -r requirements.txt
 ```
 
-O si usas un entorno virtual:
+### Instalación manual
+
+```bash
+pip install opencv-contrib-python==4.10.0.84 numpy==1.26.4 matplotlib==3.10.3 pandas==2.2.2
+```
+
+<details>
+<summary><b>Instalación en entorno virtual</b></summary>
 
 **Windows:**
 ```bash
-ruta\al\entorno\Scripts\pip.exe install numpy==1.26.4 matplotlib==3.10.3 pandas==2.2.2 opencv-python
+ruta\al\entorno\Scripts\pip.exe install -r requirements.txt
 ```
 
-**Linux/MacOS:**
+**Linux/macOS:**
 ```bash
-ruta/al/entorno/bin/pip install numpy==1.26.4 matplotlib==3.10.3 pandas==2.2.2 opencv-python
+ruta/al/entorno/bin/pip install -r requirements.txt
 ```
 
-### Ver versiones instaladas
+</details>
 
-Para verificar las versiones de las librerías instaladas:
+### 🔍 Verificar versiones instaladas
+
+Para verificar que las librerías estén correctamente instaladas:
 
 ```bash
-pip show opencv-python matplotlib numpy pandas
+pip show opencv-contrib-python numpy matplotlib pandas
 ```
 
-O para ver todas tus dependencias:
+Para ver todas las dependencias instaladas:
 
 ```bash
 pip freeze
@@ -99,10 +112,29 @@ pip freeze
 
 ```
 TUIA_PDI_TP1/
-├── ejercicio_1.py
-├── ejercicio_2.py
-└── README.md
+├── ejercicio_1.py              # Script principal - Ejercicio 1
+├── ejercicio_2.py              # Script principal - Ejercicio 2
+├── utils/                      # Módulo de utilidades
+│   ├── __init__.py
+│   └── utils.py
+├── Imagen_con_detalles_escondidos.tif  # Imagen para ejercicio 1
+├── formulario_01.png           # Formulario 1
+├── formulario_02.png           # Formulario 2
+├── formulario_03.png           # Formulario 3
+├── formulario_04.png           # Formulario 4
+├── formulario_05.png           # Formulario 5
+├── resultados_formularios.csv  # Resultados del procesamiento
+├── requirements.txt            # Dependencias del proyecto
+└── README.md                   # Este archivo
 ```
+
+## 📝 Descripción de los ejercicios
+
+### Ejercicio 1
+Procesamiento de imagen con detalles escondidos mediante ecualización local de histograma con diferentes tamaños de ventana.
+
+### Ejercicio 2
+Análisis y validación automática de formularios mediante procesamiento de imágenes, detección de bordes y extracción de campos.
 
 ## 👨‍💻 Autor
 
